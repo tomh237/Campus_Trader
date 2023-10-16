@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carpool Request</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .request-form {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .request-form h2 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .request-form label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        .request-form input[type="text"],
+        .request-form input[type="date"],
+        .request-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .request-form button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .request-form button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Campus Trader</h1>
+        <nav>
+            <ul>
+                <li><a href="login page.html">Home</a></li>
+                <li><a href="Sales.html">Sales</a></li>
+                <li><a href="Profile.html">Profile</a></li>
+                <li><a href="Favorites.html">Favorites</a></li>
+                <li><a href="Carpool.html">Carpool</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="request-form">
+            <h2>Carpool Request Form</h2>
+            <form action="process_request.php" method="post">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="departure">Departure Location:</label>
+                <input type="text" id="departure" name="departure" required>
+
+                <label for="destination">Destination Location:</label>
+                <input type="text" id="destination" name="destination" required>
+
+                <label for="Passengers">Number of Passengers:</label>
+                <input type="Number" id="Passenger" name="Passenger" required>
+
+                <label for="additionalInfo">Passenger note (optional):</label>
+                <textarea id="additionalInfo" name="additionalInfo" rows="4"></textarea>
+
+                <button type="submit">Submit Request</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

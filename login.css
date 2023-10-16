@@ -1,0 +1,32 @@
+/* styles.css */
+
+/* Set the background color to red */
+body {
+    background-color: red;
+    color: black;
+    font-family: Arial, sans-serif;
+}
+
+/* Style headers with a black background and white text */
+h1, h2, h3 {
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+
+/* Style links to have black text */
+a {
+    color: black;
+    text-decoration: none;
+}
+
+/* Change link color on hover */
+a:hover {
+    color: #FF0000; /* Red color on hover */
+}
+
+/* Style paragraphs with a black border and padding */
+p {
+    border: 1px solid black;
+    padding: 10px;
+}

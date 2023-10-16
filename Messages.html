@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .chat-box {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-height: 400px;
+            overflow-y: scroll;
+        }
+
+        .input-box {
+            display: flex;
+        }
+
+        .input-box input[type="text"] {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+
+        .input-box button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .input-box button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Campus Trader</h1>
+        <nav>
+            <ul>
+                <li><a href="login page.html">Home</a></li>
+                <li><a href="Sales.html">Sales</a></li>
+                <li><a href="Profile.html">Profile</a></li>
+                <li><a href="Favorites.html">Favorites</a></li>
+                <li><a href="Carpool.html">Carpool</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="chat-box" id="chat-box">
+            <!-- Chat messages will be displayed here -->
+        </div>
+        <div class="input-box">
+            <input type="text" id="message" placeholder="Type your message...">
+            <button id="send">Send</button>
+        </div>
+    </div>
+
+    <script>
+        const chatBox = document.getElementById("chat-box");
+        const messageInput = document.getElementById("message");
+        const sendButton = document.getElementById("send");
+
+        sendButton.addEventListener("click", () => {
+            const message = messageInput.value.trim();
+            if (message !== "") {
+                const messageElement = document.createElement("p");
+                messageElement.textContent = message;
+                chatBox.appendChild(messageElement);
+                messageInput.value = "";
+                chatBox.scrollTop = chatBox.scrollHeight;
+            }
+        });
+
+        // You can add code to send and receive messages in real-time here.
+    </script>
+</body>
+</html>
